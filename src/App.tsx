@@ -10,6 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080'}/api/data`);
+      console.log(data);
       setData(data.message);
     };
 
