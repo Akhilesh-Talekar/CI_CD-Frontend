@@ -10,6 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(`http://ec2-35-154-219-226.ap-south-1.compute.amazonaws.com:8080/api/data`);
+      console.log(`Backend URL: ${import.meta.env.VITE_BACKEND_URL}`);
       console.log(data);
       setData(data.message);
     };
